@@ -1,0 +1,16 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo "Installing dependencies..."
+      - pip install cfn-lint
+
+  build:
+    commands:
+      - echo "Running CloudFormation template validation..."
+      - cfn-lint src/templates/pipeline-template.yaml
+
+artifacts:
+  files:
+    - "**/*"

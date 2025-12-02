@@ -1,0 +1,25 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: "Sample CloudFormation DevSecOps Pipeline (Student Version)"
+
+Parameters:
+  Environment:
+    Type: String
+    Default: dev
+
+Resources:
+  PipelineS3Bucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: devsecops-pipeline-artifacts-Harsha
+
+  PipelineLogGroup:
+    Type: AWS::Logs::LogGroup
+    Properties:
+      LogGroupName: "/aws/devsecops/pipeline"
+      RetentionInDays: 7
+
+Outputs:
+  ArtifactBucket:
+    Value: !Ref PipelineS3Bucket
+  LogGroup:
+    Value: !Ref PipelineLogGroup
