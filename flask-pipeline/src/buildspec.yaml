@@ -1,0 +1,16 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo "Installing dependencies..."
+      - pip install -r src/requirements.txt
+
+  build:
+    commands:
+      - echo "Running basic checks..."
+      - python -m compileall src
+
+artifacts:
+  files:
+    - "**/*"
