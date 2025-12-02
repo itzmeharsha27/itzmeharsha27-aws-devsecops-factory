@@ -1,0 +1,16 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo "Installing dependency scanner (placeholder)..."
+      - echo "Here you would install tools like WhiteSource, osv-scanner, etc."
+
+  build:
+    commands:
+      - echo "Running dependency vulnerability scan (placeholder)..."
+      - echo "Add real scan commands locally. Do not commit tokens."
+
+  post_build:
+    commands:
+      - echo "Dependency scan completed."
