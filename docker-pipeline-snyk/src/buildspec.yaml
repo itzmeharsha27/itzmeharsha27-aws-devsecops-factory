@@ -1,0 +1,21 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo "Installing Snyk CLI..."
+      - npm install -g snyk
+
+  pre_build:
+    commands:
+      - echo "Authenticating Snyk (placeholder)..."
+      - echo "Skipping real auth. Add your token locally, never commit it."
+
+  build:
+    commands:
+      - echo "Running Snyk security scan..."
+      - snyk test || true
+
+  post_build:
+    commands:
+      - echo "Snyk scan completed."
