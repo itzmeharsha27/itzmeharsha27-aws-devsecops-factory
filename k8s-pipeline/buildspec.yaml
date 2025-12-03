@@ -1,0 +1,17 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo "Installing kubectl (placeholder)..."
+      - echo "In a real pipeline you would configure kubectl and auth here."
+
+  build:
+    commands:
+      - echo "Applying Kubernetes manifests (placeholder)..."
+      - echo "kubectl apply -f k8s/deployment.yaml"
+      - echo "kubectl apply -f k8s/service.yaml"
+
+artifacts:
+  files:
+    - "**/*"

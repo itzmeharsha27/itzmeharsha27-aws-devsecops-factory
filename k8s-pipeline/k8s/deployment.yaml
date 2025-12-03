@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: devsecops-k8s-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: devsecops-k8s
+  template:
+    metadata:
+      labels:
+        app: devsecops-k8s
+    spec:
+      containers:
+        - name: app
+          image: nginx:latest
+          ports:
+            - containerPort: 8080
