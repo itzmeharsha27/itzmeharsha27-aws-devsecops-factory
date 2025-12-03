@@ -1,0 +1,18 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo "Installing packer..."
+      - echo "(Local step only — do not include AWS credentials here.)"
+
+  build:
+    commands:
+      - echo "Validating Packer template..."
+      - echo "packer validate packer/template.json || true"
+      - echo "Building AMI (placeholder)..."
+      - echo "packer build packer/template.json || true"
+
+artifacts:
+  files:
+    - "**/*"
