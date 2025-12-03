@@ -1,0 +1,17 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo "Installing Go dependencies..."
+      - go version
+
+  build:
+    commands:
+      - echo "Building Go application..."
+      - cd src
+      - go build -o app main.go
+
+artifacts:
+  files:
+    - "**/*"
