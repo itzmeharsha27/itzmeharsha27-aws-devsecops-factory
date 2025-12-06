@@ -1,0 +1,18 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo "Installing Terraform (placeholder)..."
+      - echo "In real pipeline, Terraform CLI would be installed here."
+
+  build:
+    commands:
+      - echo "Running terraform init / validate (placeholder)..."
+      - cd src
+      - echo "terraform init"
+      - echo "terraform validate"
+
+artifacts:
+  files:
+    - "**/*"
